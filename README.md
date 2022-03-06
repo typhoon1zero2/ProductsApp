@@ -8,7 +8,7 @@
 
 ###
 
-<img src="ProductsAPP.png" alt="wide-frame" >
+<img src="./img/ProductsAPP.png" alt="wide-frame" >
 
 ## Install dependencies for server
 
