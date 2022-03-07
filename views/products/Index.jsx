@@ -1,5 +1,6 @@
 const { links } = require('express/lib/response');
 const React = require('react');
+const { Container , Row, Col, Card, Button, Navbar, Nav} = require("react-bootstrap");
 const DefaultLayout = require('../layout/Default.jsx');
 
 const myStyle = {
@@ -17,42 +18,36 @@ const myStyle = {
 
 
 class Index extends React.Component {
-    render(){
+    render() {
         const products = this.props.product;
-        return(
-            <DefaultLayout name="Product Index Page">
-             <div>
-                <ul class="nav nav-tabs">
-                   {
-                       products.map((product)=>{
-                           return(
-                               <div className='card'>
-                                   <h4>{product.name}</h4>
-                                   <p>{product.description}</p>
-                                   <p>{product.image}</p>
-                                   <article>{product.price}</article>
-                                   <article>{product.qty}</article>
-                                   <h2>
-                                        {product.name} : {product.isQuality ? 'Quality' : ' Not Quality'}
-                                    </h2>
-                                   <p><a class="btn btn-primary btn-sm" href={`/products/${product._id}/edit`}>EDIT</a></p>
-                                   <form  action={`/products/${product._id}?_method=DELETE`} method="POST">
-                                   <input class="btn btn-primary btn-sm" type="submit" value={`DELETE ${product.name}`} />
-                                   </form><hr/>
-                                   </div>
-                            
-                           )
-                       })
-                   }
-                </ul>
-                <nav class="text-center">
-                   <h4><a class="btn btn-primary btn-lg" href="/products/new">Create A NEW PRODUCT</a></h4> 
-                </nav>
-    
-            </div>
-            </DefaultLayout>
-        )
+        console.log(products);
+        return (
+            <DefaultLayout>
+              <div>
+            <Container>
+              <Row>
+                <Col>
+                  <Card style={{ width: "18rem" }}>
+                    <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/2048px-Electronic-Arts-Logo.svg.png" />
+                    <Card.Body>
+                      <Card.Title>Product Title Here:</Card.Title>
+                      <Card.Text>
+                        Product Details Here:
+                                      </Card.Text>
+                                      <Card.Text>
+                                          Price Here:
+                      </Card.Text>
+                      <Button variant="primary">Edit Button Here</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        </DefaultLayout>
+      );
     }
-}
+  }
+  
 
 module.exports = Index;
