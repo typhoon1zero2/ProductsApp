@@ -6,7 +6,7 @@
 
 ## Author: Phong Nguyen
 
-###
+### Wide-Frame
 
 <img src="public/css/img/wideframe.jpeg">
 
