@@ -1,11 +1,14 @@
-// Import Our Dependencies
+/****************************************
+ * Import Our Dependencies
+ ***************************************/
 require('dotenv').config(); // Loads Env vars into process.env
 const express = require('express'); 
 const { default: mongoose } = require('mongoose');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const path = require('path');
-const productsRoutes = require('./routes/products-routes');
+const productsRoutes = require('./controllers/products-controller.js');
+const productsController = require('./controllers/products-controller.js')
 
 // App Object Setup 
 const app = express();
@@ -37,12 +40,19 @@ app.use((req, res, next)=>{
     console.log(req.body)
     next()
 })
-app.use('/products', productsRoutes)
 app.use(express.json());
 
 
-app.use(express.urlencoded({ extended: true}))
+
+
+//app.use(express.urlencoded({ extended: true}))
 app.use(methodOverride('_method'))
+
+// Routes
+app.use('/products', productsController)
+app.get('/', (req, res) => {
+    res.send(" Your server is running you better go catch it");
+})
 
 
 //Server Listener
