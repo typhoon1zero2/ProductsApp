@@ -8,7 +8,7 @@
 
 ### Wide-Frame
 
-<img src="public/css/img/wideframe.jpeg">
+<img src="public/img/wideframe.jpeg">
 
 ## Install dependencies for server
 
