@@ -1,4 +1,6 @@
 const React = require('react');
+const { Container, Row, Col, Card, Button, Navbar, Nav } = require("react-bootstrap");
+require("../../public/css/app.css")
 
 class DefaultLayout extends React.Component {
     render(){
@@ -16,21 +18,20 @@ class DefaultLayout extends React.Component {
                 </head>
                 <body>
                     <header>
-                        
-                        </header>
+                    <Navbar bg="dark" variant="dark">
+              <Container>
+                <Navbar.Brand href="#home">Product Navbar</Navbar.Brand>
+                <Nav className="me-auto">
+                  <Nav.Link href="#home">Products</Nav.Link>
+                  <Nav.Link href="#features">Add</Nav.Link>
+                  <Nav.Link href="#pricing">Log In</Nav.Link>
+                </Nav>
+              </Container>
+            </Navbar>
+
+                    </header>
                         <main>
-                            <h1 class='h1' style={{ 
-                            fontFamily: "Comfortaa",
-                            background: "whitesmoke",
-                            margin: 0,
-                            marginBottom: '0.5em',
-                            padding: '1em',
-                            textAlign: 'center',
-                            color: 'black',
-                            textShadow: '1px 1px 1px red',
-                       
-                    }}>
-                        {this.props.name}</h1>
+                            <h1>{this.props.name}</h1>
                              {this.props.children}
                      </main>
                 </body>
