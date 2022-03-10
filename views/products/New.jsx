@@ -1,37 +1,91 @@
-const React = require('react');
+const React = require("react");
 const DefaultLayout = require("../layout/Default.jsx");
+const {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  Navbar,
+  Nav,
+  Form,
+} = require("react-bootstrap");
 
-class New extends React.Component{
-  render(){
-      return(
-          <DefaultLayout name="NEW PRODUCT PAGE">
-              <form action="/products" method="POST">
-                <fieldset>
-                    <legend>Create Your Product</legend>
-                    <label>
-                        Product Name:<input type="text" name="name" placeholder="enter your product name" /> <br />
-                    </label>
-                    <label>
-                        Description:<textarea rows="6" cols="20" name="description" placeholder="enter your product description" /> <br />
-                    </label>
-                    <label>
-                        image:<input type="text" name="image" placeholder="enter your product image" /> <br />
-                    </label>
-                    <label>
-                        Price:<input type="text" name="price" placeholder="enter your product price" /> <br />
-                    </label>
-                    <label>
-                        Qty:<input type="text" name="qty" placeholder="enter your product qty" /> <br />
-                    </label>
-                    <label> Is Your Product Good?:<input type="checkbox" name="isQuality" /> </label> <br />
-                    </fieldset>
-                    <input type="submit" value="Create Your New Product" />
-                </form>
-                <nav>
-                      <h4 class="text-center"><a class="btn btn-primary btn-lg" href='/products'>Back to Product Index Page</a></h4> 
-                </nav>
-          </DefaultLayout>
-      )
+class New extends React.Component {
+  render() {
+    const products = this.props.product;
+    return (
+      <DefaultLayout>
+        <form action="/products" method="POST">
+          <Container>
+            <Row className="createForm">
+              <Col>
+                <Form.Label htmlFor="inputProductName">Product Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  id="inputProductName"
+                  aria-describedby="ProductNameBlock"
+                  name="name"
+                />
+                <Form.Text id="ProductNameBlock" muted>
+                  Input a new Product Name
+                </Form.Text>
+              </Col>
+              <Col>
+                <Form.Label htmlFor="inputProductDescription">
+                  Product Description
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  id="inputProductDescription"
+                  aria-describedby="ProductDescription"
+                  name="description"
+                />
+                <Form.Text id="ProductDescription" muted>
+                  Input a new Product Description
+                </Form.Text>
+              </Col>
+              <Col>
+                <Form.Label htmlFor="inputPrice">Price</Form.Label>
+                <Form.Control
+                  type="text"
+                  id="inputPrice"
+                  aria-describedby="PriceBlock"
+                  name="price"
+                />
+                <Form.Text id="PriceBlock" muted>
+                  Input a new Price
+                </Form.Text>
+              </Col>
+              <Col>
+                <Form.Label htmlFor="inputImageUrl">Image URL</Form.Label>
+                <Form.Control
+                  type="url"
+                  id="inputImageURL"
+                  aria-describedby="ImageUrlBlock"
+                  name="image"
+                />
+                <Form.Text id="ImageUrlBlock" muted>
+                  Input a new Image URL
+                </Form.Text>
+              </Col>
+              <label>
+                Your Product quality?:{" "}
+                <input type="checkbox" name="isQuality" />
+              </label>
+              <Button
+                style={{ color: "whitesmoke", margin: "35px" }}
+                variant="danger"
+                type="submit"
+                value="Create Your Product"
+              >
+                Create Product
+              </Button>
+            </Row>
+          </Container>
+        </form>
+      </DefaultLayout>
+    );
   }
 }
 

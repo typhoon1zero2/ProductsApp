@@ -1,53 +1,62 @@
-const { links } = require('express/lib/response');
-const React = require('react');
-const { Container , Row, Col, Card, Button, Navbar, Nav} = require("react-bootstrap");
-const DefaultLayout = require('../layout/Default.jsx');
-
-const myStyle = {
-    display: "inline-flex",
-    position: "relative",
-    flexDirection: "column",
-    margin: "10px",
-    background: "whitesmoke",
-    width: "200px",
-    height: "280px",
-    boxShadow: "5px 5px 10px #ccc",
-    alignContent: "center",
-    alignItems: "center",
-};
-
+const { links } = require("express/lib/response");
+const React = require("react");
+const {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  Navbar,
+  Nav,
+} = require("react-bootstrap");
+const DefaultLayout = require("../layout/Default.jsx");
 
 class Index extends React.Component {
-    render() {
-        const products = this.props.product;
-        console.log(products);
-        return (
-            <DefaultLayout>
-              <div>
-            <Container>
-              <Row>
+  render() {
+    const products = this.props.product;
+    console.log(products);
+    return (
+      <DefaultLayout>
+        <br />
+        <div>
+          <Container>
+            <Row>
+              {products.map((data) => (
                 <Col>
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/2048px-Electronic-Arts-Logo.svg.png" />
+                  <Card style={{ width: "12rem", background: "whitesmoke" }}>
                     <Card.Body>
-                      <Card.Title>Product Title Here:</Card.Title>
-                      <Card.Text>
-                        Product Details Here:
-                                      </Card.Text>
-                                      <Card.Text>
-                                          Price Here:
+                      <Card.Title>
+                        <h3>{`${data.name}`}</h3>
+                      </Card.Title>
+                      <Card.Img  variant="top" src={data.image} />
+                      <Card.Title style={{ fontSize: "18px" }}>
+                        {data.description}
+                      </Card.Title>
+                      <Card.Text style={{ color: "blueviolet" }}>
+                        $ {data.price}
                       </Card.Text>
-                      <Button variant="primary">Edit Button Here</Button>
+                      <Card.Text
+                        style={{ fontFamily: "Arial", fontSize: "20px" }}
+                      >
+                        In-stock: {data.qty}
+                      </Card.Text>
+                      <Button
+                        style={{ color: "purple", margin: "5px", boxShadow: "5px 5px 0px" }}
+                        variant="primary"
+                        href={`/products/${data._id}/edit`}
+                      >
+                        Edit
+                      </Button>
                     </Card.Body>
                   </Card>
                 </Col>
-              </Row>
-            </Container>
-          </div>
-        </DefaultLayout>
-      );
-    }
+              ))}
+            </Row>
+          </Container>
+        </div>
+      </DefaultLayout>
+    );
   }
-  
+}
 
 module.exports = Index;
