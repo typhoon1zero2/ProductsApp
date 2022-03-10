@@ -17,14 +17,18 @@ class Show extends React.Component {
               alt="product image"
             />
             <div class="card-body">
-              <h3 class="card-title">{`${products.name}`}</h3>
-              <p class="card-text"> {`${products.description}`}</p>
+              <h4 style={{ color: "brown"}} class="card-title">Product Name: {`${products.name}`}</h4>
+              <p style={{fontFamily: "fantasy"}} class="card-text">Description:  {`${products.description}`}</p>
               <p class="card-text">
                 <small class="text-muted"> $ {products.price}</small>
               </p>
               <p class="card-text">
                 <small class="text-muted">In-Stock: {products.qty}</small>
               </p>
+              <p class="card-text">
+                <small class="text-muted">{products.isQuality ? 'Good' : 'Bad'}</small>
+              </p>
+              
             </div>
           </div>
         </div>

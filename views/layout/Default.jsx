@@ -32,21 +32,15 @@ class DefaultLayout extends React.Component {
             crossOrigin="anonymous"
           ></link>
         </head>
-        <body>
+        <body style={{ background: "burlywood1" }}>
           <header style={{display: "inline" ,position: "relative", flexDirection: "column",  margin: "10px", background: "whitesmoke", width: "200px", height:  "280px", alignContent: "center", alignItems: "center"}}>
             <Navbar bg="dark" variant="dark">
               <Container>
                 <Navbar.Brand href="/products">HOME</Navbar.Brand>
                 <Nav className="me-auto">
-                  <Nav.Link href="/products/show">Show </Nav.Link>
-                  <Nav.Link href="/products/new">Add </Nav.Link>
-                  <Nav.Link
-                    href="/products/edit">
-                    Edit
-                  </Nav.Link>
-                  <Nav.Link href={"user"}>Log In</Nav.Link>
-                  <Nav.Link href="/aboutUs/">About</Nav.Link>
-                  <Nav.Link href="/register/">Register</Nav.Link>
+                  <Nav.Link href="/products/New">Add </Nav.Link>
+                  <Nav.Link href="/user/login">Log In</Nav.Link>
+                  <Nav.Link href="/user/register/">Register</Nav.Link>
                 </Nav>
               </Container>
             </Navbar>
@@ -55,12 +49,21 @@ class DefaultLayout extends React.Component {
             <h1>{this.props.name}</h1>
             {this.props.children} <br />
           </main>
-          <footer>
-            <div class="card-footer">
-              <small style={{ textAlign: "center" }} class="text-muted">
-                Phong Nguyen
+          {/* <footer style={{ fontSize: "18px", fontFamily: "fantasy ", textAlign: "center", background: "burlywood" }}>
+            <div class="card-footer" >
+              <small class="text-muted">
+              <Nav.Link href="products/About">About</Nav.Link>
+                Copyright @ Phong Nguyen
               </small>
             </div>
+          </footer> */}
+          <footer>
+          <div class="jumbotron">
+    <large>Copyright @ Phong Nguyen 2022</large>
+    <p></p>
+
+    <p><a class="btn btn-primary btn-lg" href="products/About">About</a></p>
+    </div>
           </footer>
         </body>
       </html>

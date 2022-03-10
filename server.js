@@ -42,14 +42,14 @@ app.use((req, res, next) => {
   next();
 });
 app.use(express.json());
-
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 // Routes
 app.use("/products", productsController);
 app.get("/", (req, res) => {
-  res.send(" Your server is running you better go catch it");
+  res.send(" <h1>Welcome to my Product-App</h1>");
 });
 
 //Server Listener

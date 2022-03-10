@@ -23,7 +23,7 @@ class Index extends React.Component {
             <Row>
               {products.map((data) => (
                 <Col>
-                  <Card style={{ width: "12rem", background: "whitesmoke" }}>
+                  <Card style={{ width: "30rem", background: "whitesmoke" }}>
                     <Card.Body>
                       <Card.Title>
                         <h3>{`${data.name}`}</h3>

@@ -2,6 +2,8 @@ const express = require("express");
 const Product = require("../models/product");
 const router = express.Router();
 
+
+
 // Index
 router.get("/", (req, res) => {
   Product.find({})
@@ -14,10 +16,15 @@ router.get("/", (req, res) => {
     });
 });
 
+//About my page
+router.get("/about",(req,res)=>{
+  res.render("products/About")
+})
 // New
 router.get("/new", (req, res) => {
   res.render("products/New");
 });
+
 
 // Delete
 router.delete("/:id", (req, res) => {
