@@ -32,4 +32,8 @@
 
 ## Run the React client only
 
-### `npm run client`
+### `snapshot front-end`
+<img src="public/img/front-end.jpeg">
+
+### `snapshot back-end`
+<img src="public/img/backend.jpeg">
