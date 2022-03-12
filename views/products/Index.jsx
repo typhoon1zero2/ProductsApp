@@ -26,14 +26,14 @@ class Index extends React.Component {
                     <div className="bg-light shadow-sm mx-auto width: 80%; height: 300px; border-radius: 21px 21px 0 0">
                       <div
                         className="my-3 p-3"
-                        style={{ width: "25rem", background: "whitesmoke" }}
+                        style={{ width: "26.7rem", background: "whitesmoke" }}
                       >
                         <h2 className="display-5">{`${data.name}`}</h2>
                         <p className="lead">{data.description}</p>
                         <Card.Img
                           style={{
                             color: "burlywood1",
-                            margin: "2px",
+                            margin: "10px",
                             boxShadow: "5px 5px 0px",
                           }}
                           variant="top"
@@ -49,7 +49,7 @@ class Index extends React.Component {
                         </Card.Text>
                         <Button
                           style={{
-                            color: "purple",
+                            color: "burlywood",
                             margin: "5px",
                             boxShadow: "5px 5px 0px",
                           }}
