@@ -6,14 +6,15 @@ class Login extends React.Component {
         return(
             <DefaultLayout>
                 <div class="row">
-                <form action="/user/login" method="post">
+                <form action="/user/login" method="POST">
                     <h3>User Login</h3>
                     <div class="col">
-                       UserName: <input type="text" class="form-control" placeholder="Username" aria-label="UserName" />
+                       UserName: <input name="username" type="text" class="form-control" placeholder="Username" aria-label="UserName" />
                      </div>
                 <div class="col">
-                        Password: <input type="password" class="form-control" placeholder="Password" aria-label="Password" />
+                        Password: <input name="password" type="password" class="form-control" placeholder="Password" aria-label="Password" />
                 </div>
+                <input type="submit" value="Login" />
                 </form>
                 </div>
             </DefaultLayout>
