@@ -29,7 +29,7 @@ class Edit extends React.Component {
     return (
       <DefaultLayout>
         <div className="card">
-          <Container >
+          <Container>
             <Row>
               <Col>
                 <Card style={{ width: "12rem" }}>

@@ -17,43 +17,55 @@ class Index extends React.Component {
     console.log(products);
     return (
       <DefaultLayout>
-        <br />
-        <div>
-          <Container>
-            <Row>
-              {products.map((data) => (
-                <Col>
-                  <Card style={{ width: "30rem", background: "whitesmoke" }}>
-                    <Card.Body>
-                      <Card.Title>
-                        <h3>{`${data.name}`}</h3>
-                      </Card.Title>
-                      <Card.Img  variant="top" src={data.image} />
-                      <Card.Title style={{ fontSize: "18px" }}>
-                        {data.description}
-                      </Card.Title>
-                      <Card.Text style={{ color: "blueviolet" }}>
-                        $ {data.price}
-                      </Card.Text>
-                      <Card.Text
-                        style={{ fontFamily: "Arial", fontSize: "20px" }}
+        <Container>
+          <Row>
+            {products.map((data) => (
+              <Col>
+                <div className="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+                  <div className="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                    <div className="bg-light shadow-sm mx-auto width: 80%; height: 300px; border-radius: 21px 21px 0 0">
+                      <div
+                        className="my-3 p-3"
+                        style={{ width: "25rem", background: "whitesmoke" }}
                       >
-                        In-stock: {data.qty}
-                      </Card.Text>
-                      <Button
-                        style={{ color: "purple", margin: "5px", boxShadow: "5px 5px 0px" }}
-                        variant="primary"
-                        href={`/products/${data._id}/edit`}
-                      >
-                        Edit
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </div>
+                        <h2 className="display-5">{`${data.name}`}</h2>
+                        <p className="lead">{data.description}</p>
+                        <Card.Img
+                          style={{
+                            color: "burlywood1",
+                            margin: "2px",
+                            boxShadow: "5px 5px 0px",
+                          }}
+                          variant="top"
+                          src={data.image}
+                        />
+                        <Card.Text style={{ color: "blueviolet" }}>
+                          $ {data.price}
+                        </Card.Text>
+                        <Card.Text
+                          style={{ fontFamily: "Arial", fontSize: "20px" }}
+                        >
+                          In-stock: {data.qty}
+                        </Card.Text>
+                        <Button
+                          style={{
+                            color: "purple",
+                            margin: "5px",
+                            boxShadow: "5px 5px 0px",
+                          }}
+                          variant="primary"
+                          href={`/products/${data._id}/edit`}
+                        >
+                          Edit
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
       </DefaultLayout>
     );
   }

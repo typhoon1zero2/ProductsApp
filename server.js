@@ -7,9 +7,11 @@ const { default: mongoose } = require("mongoose");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
 const path = require("path");
-const productsRoutes = require("./controllers/products-controller.js");
 const productsController = require("./controllers/products-controller.js");
+const userController = require('./controllers/users-controller.js');
 const Product = require("./models/product");
+const session = require("express-session");
+const mongoLog = require("connect-mongo");
 
 // App Object Setup
 const app = express();
@@ -45,14 +47,31 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    store: mongoLog.create({ mongoUrl: process.env.DATABASE_URL}),
+    saveUninitialized: true,
+    resave: false,
+    cookie: {
+      httpOnly: true,
+      maxAge: parseInt(process.env.SESSION_MAX_AGE)
+    }
+  })
+);
 
-// Routes
+/**************************
+ *  ROUTES
+ **************************/
+app.use("/user", userController );
 app.use("/products", productsController);
 app.get("/", (req, res) => {
-  res.send(" <h1>Welcome to my Product-App</h1>");
+  res.send(`<h2> Welcome to my Product-App</h2> <br/> `);
 });
 
-//Server Listener
+/***************************
+ * Server Listener
+ ***************************/
 const PORT = process.env.PORT;
 app.listen(PORT, () =>
   console.log(`If your reading this...You still listening port: ${PORT}`)

@@ -2,8 +2,6 @@ const express = require("express");
 const Product = require("../models/product");
 const router = express.Router();
 
-
-
 // Index
 router.get("/", (req, res) => {
   Product.find({})
@@ -17,14 +15,21 @@ router.get("/", (req, res) => {
 });
 
 //About my page
-router.get("/about",(req,res)=>{
-  res.render("products/About")
-})
+router.get("/about", (req, res) => {
+  res.render("products/About");
+});
+//Login Auth
+router.use((req, res, next) => {
+  if (req.session.loggedIn) {
+    next();
+  } else {
+    res.redirect("/user/login");
+  }
+});
 // New
 router.get("/new", (req, res) => {
   res.render("products/New");
 });
-
 
 // Delete
 router.delete("/:id", (req, res) => {
