@@ -114,39 +114,31 @@ class DefaultLayout extends React.Component {
                   <circle cx="12" cy="12" r="10"></circle>
                   <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
                 </svg>
+                
                 <small class="d-block mb-3 text-muted">© Phong Nguyen 2021-2022</small>
+               
+                <div>
+        </div>
               </div>
               <div class="col-6 col-md">
-                <h5>Features</h5>
+                <h5>Contact</h5>
                 <ul class="list-unstyled text-small">
                   <li>
-                    <a class="link-secondary" href="#">
-                      Cool stuff
+                    <img style={{width: "24px", height: "24px"}} src="/img/linkedin.png"/>
+                    <a class="link-secondary" href="https://www.linkedin.com/in/phong-nguyen-b9520b22b/">
+                      LinkedIn
                     </a>
                   </li>
                   <li>
-                    <a class="link-secondary" href="#">
-                      Random feature
+                  <img style={{width: "24px", height: "24px"}} src="/img/github.png"/>
+                    <a class="link-secondary" href="https://github.com/typhoon1zero2">
+                     GitHub
                     </a>
                   </li>
                   <li>
-                    <a class="link-secondary" href="#">
-                      Team feature
-                    </a>
-                  </li>
-                  <li>
-                    <a class="link-secondary" href="#">
-                      Stuff for developers
-                    </a>
-                  </li>
-                  <li>
-                    <a class="link-secondary" href="#">
-                      Another one
-                    </a>
-                  </li>
-                  <li>
-                    <a class="link-secondary" href="#">
-                      Last time
+                  <img style={{width: "24px", height: "24px"}} src="/img/email.png"/>
+                    <a class="link-secondary" href="https://www.yahoo.com/">
+                      ptnguyen617@yahoo.com
                     </a>
                   </li>
                 </ul>
