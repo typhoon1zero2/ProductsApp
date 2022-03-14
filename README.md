@@ -1,6 +1,7 @@
 # MERN Stack - Products APP
-
-> Products website built with the MERN stack with ReactJS.ExpressJS.React_Router
+## User Stories
+> As a user, I want the app open on a lost of all products
+> As a user, I want to be able to sort the product and have it updates as i type.
 
 ## Demo:
 
@@ -16,17 +17,14 @@
 ### `POSTMAN,VSCODE`
 ### `HTML,CSS,JScript`
 
-## Install dependencies for client
+## Design
 
-### cd client ---> `npm install`
+### Brief Overview
+>This project was built using 2 repos: 1 front-end an 1 back-end. 
+>The back-end implements RESTful routing, CRUD operations, and connects to a MongoDB. 
+>THe front-end implements NextJs -> React Front-End -> Node/Express server rendering.
 
-## Connect to your mongodb and add info in .env
-
-##
-
-## Run the Express server only
-
-### Credits
+## Credits
 ### `Joshua Miller`
 ### `Special thanks to ALL my break-out group and TA's`
 
@@ -35,8 +33,10 @@
 ### `https://app.diagrams.net/`
 ### `heroko`
 
-### `snapshot front-end`
+## `snapshot front-end`
 <img src="public/img/front-end.jpeg">
 
-### `snapshot back-end`
+## `snapshot front-end`
 <img src="public/img/backend.jpeg">
+
+

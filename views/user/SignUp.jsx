@@ -11,7 +11,6 @@ class SignUp extends React.Component {
               <form action="/user/SignUp" method="POST">
                 <h2 class="display-5">New User Sign-Up</h2>
                 <p class="lead">
-                  UserName
                   <input
                     name="username"
                     type="text"
@@ -21,7 +20,6 @@ class SignUp extends React.Component {
                   />
                 </p>
                 <p class="lead">
-                  Password
                   <input
                     name="password"
                     type="password"
