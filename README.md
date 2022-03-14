@@ -10,9 +10,11 @@
 
 <img src="public/img/wideframe.jpeg">
 
-## Install dependencies for server
+## Technologies Used
 
-### `npm install`
+### `NodeJS,Express, REACT,MongoDB, Heroku`
+### `POSTMAN,VSCODE`
+### `HTML,CSS,JScript`
 
 ## Install dependencies for client
 
@@ -22,15 +24,16 @@
 
 ##
 
-## Run the client & server with concurrently
-
-### `npm run dev`
-
 ## Run the Express server only
 
-### `npm run server`
+### Credits
+### `Joshua Miller`
+### `Special thanks to ALL my break-out group and TA's`
 
-## Run the React client only
+## Resources
+### `Bootstrap ^5.1.3"`
+### `https://app.diagrams.net/`
+### `heroko`
 
 ### `snapshot front-end`
 <img src="public/img/front-end.jpeg">
