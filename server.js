@@ -9,7 +9,7 @@ const methodOverride = require("method-override");
 const path = require("path");
 const productsController = require("./controllers/products-controller.js");
 const userController = require('./controllers/users-controller.js');
-const Product = require("./models/product");
+const Product = require("./models/Product");
 const session = require("express-session");
 const mongoLog = require("connect-mongo");
 

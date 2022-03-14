@@ -1,6 +1,8 @@
 # MERN Stack - Products APP
+> by: Phong Nguyen
+
 ## User Stories
-> As a user, I want the app open on a lost of all products
+> As a user, I want the app open on a list of all products.
 > As a user, I want to be able to sort the product and have it updates as i type.
 
 ## Demo:
