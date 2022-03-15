@@ -8,7 +8,7 @@ const morgan = require("morgan");
 const methodOverride = require("method-override");
 const path = require("path");
 const productsController = require("./controllers/products-controller.js");
-const userController = require('./controllers/users-controller.js');
+const userController = require("./controllers/users-controller.js");
 const Product = require("./models/Product");
 const session = require("express-session");
 const mongoLog = require("connect-mongo");
@@ -50,20 +50,20 @@ app.use(methodOverride("_method"));
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
-    store: mongoLog.create({ mongoUrl: process.env.DATABASE_URL}),
+    store: mongoLog.create({ mongoUrl: process.env.DATABASE_URL }),
     saveUninitialized: true,
     resave: false,
     cookie: {
       httpOnly: true,
-      maxAge: parseInt(process.env.SESSION_MAX_AGE)
-    }
+      maxAge: parseInt(process.env.SESSION_MAX_AGE),
+    },
   })
 );
 
 /**************************
  *  ROUTES
  **************************/
-app.use("/user", userController );
+app.use("/user", userController);
 app.use("/products", productsController);
 app.get("/", (req, res) => {
   res.send(`<h2> Welcome to my Product-App</h2> <br/> `);

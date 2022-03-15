@@ -57,7 +57,10 @@ class DefaultLayout extends React.Component {
               <a className="py-2 d-none d-md-inline-block" href="/products">
                 Home
               </a>
-              <a className="py-2 d-none d-md-inline-block" href="/products/About">
+              <a
+                className="py-2 d-none d-md-inline-block"
+                href="/products/About"
+              >
                 About Us
               </a>
               <a className="py-2 d-none d-md-inline-block" href="products/New">
@@ -80,7 +83,7 @@ class DefaultLayout extends React.Component {
               <div class="col-md-5 p-lg-5 mx-auto my-5">
                 <h1 class="display-4 fw-normal">Products Apisss</h1>
                 <p class="lead fw-normal">
-                  Jumpstart your marketing efforts with this example based on Product's marketing pages.
+                  This is your Product's marketing pages.
                 </p>
                 <a class="btn btn-outline-secondary" href="/products">
                   Back to Product Page
@@ -91,9 +94,8 @@ class DefaultLayout extends React.Component {
             </div>
             <h1>{this.props.name}</h1>
             {this.props.children} <br />
-            
           </main>
-          
+
           <footer class="container py-5">
             <div class="row">
               <div class="col-12 col-md">
@@ -114,29 +116,45 @@ class DefaultLayout extends React.Component {
                   <circle cx="12" cy="12" r="10"></circle>
                   <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
                 </svg>
-                
-                <small class="d-block mb-3 text-muted">© Phong Nguyen 2021-2022</small>
-               
-                <div>
-        </div>
+
+                <small class="d-block mb-3 text-muted">
+                  © Phong Nguyen 2021-2022
+                </small>
+
+                <div></div>
               </div>
               <div class="col-6 col-md">
                 <h5>Contact</h5>
                 <ul class="list-unstyled text-small">
                   <li>
-                    <img style={{width: "24px", height: "24px"}} src="/img/linkedin.png"/>
-                    <a class="link-secondary" href="https://www.linkedin.com/in/phong-nguyen-b9520b22b/">
+                    <img
+                      style={{ width: "24px", height: "24px" }}
+                      src="/img/linkedin.png"
+                    />
+                    <a
+                      class="link-secondary"
+                      href="https://www.linkedin.com/in/phong-nguyen-b9520b22b/"
+                    >
                       LinkedIn
                     </a>
                   </li>
                   <li>
-                  <img style={{width: "24px", height: "24px"}} src="/img/github.png"/>
-                    <a class="link-secondary" href="https://github.com/typhoon1zero2">
-                     GitHub
+                    <img
+                      style={{ width: "24px", height: "24px" }}
+                      src="/img/github.png"
+                    />
+                    <a
+                      class="link-secondary"
+                      href="https://github.com/typhoon1zero2"
+                    >
+                      GitHub
                     </a>
                   </li>
                   <li>
-                  <img style={{width: "24px", height: "24px"}} src="/img/email.png"/>
+                    <img
+                      style={{ width: "24px", height: "24px" }}
+                      src="/img/email.png"
+                    />
                     <a class="link-secondary" href="https://www.yahoo.com/">
                       ptnguyen617@yahoo.com
                     </a>
