@@ -1,10 +1,10 @@
 # MERN Stack - Products APP
 
-## User Stories
-> As a user, I want the app open on a list of all products.
-> As a user, I want to be able to sort the product and have it updates.
+## About 
+This is a simple e-commerce marketing products app which allows user to keep track of their products when they create/edit or update. User be able to save all their products that will save into a database.
 
-## Demo: > https://products-apiss.herokuapp.com/products
+## Demo
+### Heroku link > https://products-apiss.herokuapp.com/products <
 
 
 ## Author: Phong Nguyen
@@ -23,14 +23,14 @@
 ## Design
 
 ### Brief Overview
->This project was built using 2 repos: 1 front-end an 1 back-end. 
->The back-end implements RESTful routing, CRUD operations, and connects to a MongoDB. 
->THe front-end implements NextJs -> React Front-End -> Node/Express server rendering.
+* This project was built using 2 repos: 1 front-end an 1 back-end. 
+* The back-end implements RESTful routing, CRUD operations, and connects to a MongoDB. 
+* THe front-end implements NextJs -> React Front-End -> Node/Express server rendering.
 
 ## Resources
-#### `Bootstrap ^5.1.3"`
-#### `https://app.diagrams.net/`
-#### `heroko`
+* `Bootstrap ^5.1.3"`
+* `https://app.diagrams.net/`
+* `heroko`
 
 ### `snapshot front-end`
 <img src="public/img/front-end.jpeg">
