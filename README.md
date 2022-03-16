@@ -14,10 +14,11 @@
 <img src="public/img/wideframe.jpeg">
 
 ## Technologies Used
+* HTML, CSS, JScript
+* NodeJS, Express, REACT, MongoDB, Heroku
+* POSTMAN, VSCODE
+* Wideframe.cc
 
-#### `NodeJS,Express, REACT,MongoDB, Heroku`
-#### `POSTMAN,VSCODE`
-#### `HTML,CSS,JScript`
 
 ## Design
 
@@ -25,10 +26,6 @@
 >This project was built using 2 repos: 1 front-end an 1 back-end. 
 >The back-end implements RESTful routing, CRUD operations, and connects to a MongoDB. 
 >THe front-end implements NextJs -> React Front-End -> Node/Express server rendering.
-
-## Credits
-#### `Joshua Miller`
-#### `Special thanks to my break-out group and TA's`
 
 ## Resources
 #### `Bootstrap ^5.1.3"`

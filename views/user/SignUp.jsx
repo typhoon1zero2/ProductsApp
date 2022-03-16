@@ -9,8 +9,9 @@ class SignUp extends React.Component {
           <div class="row">
             <div class="my-3 p-3">
               <form action="/user/SignUp" method="POST">
-                <h2 class="display-5">New User Sign-Up</h2>
-                <p class="lead">
+                <fieldset>
+                <legend class="display-5">New User Sign-Up</legend>
+                <label class="lead">
                   <input
                     name="username"
                     type="text"
@@ -18,8 +19,8 @@ class SignUp extends React.Component {
                     placeholder="Username"
                     aria-label="UserName"
                   />
-                </p>
-                <p class="lead">
+                </label>
+                <label class="lead">
                   <input
                     name="password"
                     type="password"
@@ -27,8 +28,9 @@ class SignUp extends React.Component {
                     placeholder="Password"
                     aria-label="Password"
                   />
-                </p>
+                </label>
                 <input type="submit" value="Create Account" />
+                </fieldset>
               </form>
             </div>
           </div>
