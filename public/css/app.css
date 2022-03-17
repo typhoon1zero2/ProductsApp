@@ -1,25 +1,2 @@
-/* .about__contact {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "linked-in-icon email-icon github-icon"
-                        "linked-in-text email-text github-text";
-    margin-top: .5rem;
-    font-size: 1.4rem;
-}
 
-.about__contact__linkedin--icon {
-    grid-area: linked-in-icon;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.about__contact__linkedin--text {
-    grid-area: linked-in-text;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-} */

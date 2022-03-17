@@ -15,6 +15,8 @@ class About extends React.Component {
   render() {
     return (
       <DefaultLayout>
+        <hr/>
+        <hr/>
         <body class="container">
           <div class="bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <div>

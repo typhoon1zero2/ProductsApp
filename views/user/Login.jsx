@@ -10,26 +10,26 @@ class Login extends React.Component {
             <div class="my-3 p-3">
               <form action="/user/login" method="POST">
                 <fieldset>
-                <legend class="display-5">User Login</legend>
-                <label class="lead">
-                  <input
-                    name="username"
-                    type="text"
-                    class="form-control"
-                    placeholder="Username"
-                    aria-label="UserName"
-                  />
-                </label>
-                <label class="lead">
-                  <input
-                    name="password"
-                    type="password"
-                    class="form-control"
-                    placeholder="Password"
-                    aria-label="Password"
-                  />
-                </label>
-                <input type="submit" value="Login" />
+                  <legend class="display-5">Please sign in</legend>
+                  <label class="lead">
+                    <input
+                      name="username"
+                      type="text"
+                      class="form-control"
+                      placeholder="Username"
+                      aria-label="UserName"
+                    />
+                  </label>
+                  <label class="lead">
+                    <input
+                      name="password"
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                      aria-label="Password"
+                    />
+                  </label>
+                  <input type="submit" value="Login" />
                 </fieldset>
               </form>
             </div>

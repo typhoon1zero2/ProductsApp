@@ -10,7 +10,7 @@ class SignUp extends React.Component {
             <div class="my-3 p-3">
               <form action="/user/SignUp" method="POST">
                 <fieldset>
-                <legend class="display-5">New User Sign-Up</legend>
+                <legend class="display-5">Please sign-up</legend>
                 <label class="lead">
                   <input
                     name="username"

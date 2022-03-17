@@ -32,12 +32,15 @@ class DefaultLayout extends React.Component {
             crossOrigin="anonymous"
           ></link>
         </head>
+
         <body class="container">
           <header class="site-header sticky-top py-1">
             <nav class="container d-flex flex-column flex-md-row justify-content-between">
-              <a class="py-2" href="#" aria-label="Product">
-               
-              </a>
+              <img
+                style={{ width: "25px", height: "40px" }}
+                src="/img/Logo.jpeg"
+              />
+
               <a className="py-2 d-none d-md-inline-block" href="/products">
                 Home
               </a>
@@ -53,6 +56,7 @@ class DefaultLayout extends React.Component {
               <a className="py-2 d-none d-md-inline-block" href="/user/login">
                 Login
               </a>
+
               <a className="py-2 d-none d-md-inline-block" href="/user/logout">
                 Logout
               </a>
@@ -61,30 +65,15 @@ class DefaultLayout extends React.Component {
               </a>
             </nav>
           </header>
-
           <main>
-            <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-              <div class="col-md-5 p-lg-5 mx-auto my-5">
-                <h1 class="display-4 fw-normal">Products Apisss</h1>
-                <p class="lead fw-normal">
-                  This is your Product's marketing pages.
-                </p>
-                <a class="btn btn-outline-secondary" href="/products">
-                  Back to Product Page
-                </a>
-              </div>
-              <div class="product-device shadow-sm d-none d-md-block"></div>
-              <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-            </div>
+            <hr />
             <h1>{this.props.name}</h1>
             {this.props.children} <br />
           </main>
-
+          <hr />
           <footer class="container py-5">
             <div class="row">
               <div class="col-12 col-md">
-               
-
                 <small class="d-block mb-3 text-muted">
                   © Phong Nguyen 2021-2022
                 </small>
@@ -123,7 +112,10 @@ class DefaultLayout extends React.Component {
                       style={{ width: "24px", height: "24px" }}
                       src="/img/email.png"
                     />
-                    <a class="link-secondary" href="mailto:ptnguyen617@yahoo.com">
+                    <a
+                      class="link-secondary"
+                      href="mailto:ptnguyen617@yahoo.com"
+                    >
                       ptnguyen617@yahoo.com
                     </a>
                   </li>
