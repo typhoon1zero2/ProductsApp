@@ -3,8 +3,9 @@ const DefaultLayout = require("../layout/Default.jsx");
 
 class SignUp extends React.Component {
   render() {
+    const session = this.props.session;
     return (
-      <DefaultLayout>
+      <DefaultLayout session = {session}>
         <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
           <div class="row">
             <div class="my-3 p-3">

@@ -3,12 +3,15 @@ const DefaultLayout = require("../layout/Default.jsx");
 
 class Login extends React.Component {
   render() {
+    const session = this.props.session;
     return (
-      <DefaultLayout>
+      <DefaultLayout session = {session}>
+       
         <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
           <div class="row">
             <div class="my-3 p-3">
               <form action="/user/login" method="POST">
+              <div class="bg-red">
                 <fieldset>
                   <legend class="display-5">Please sign in</legend>
                   <label class="lead">
@@ -31,10 +34,12 @@ class Login extends React.Component {
                   </label>
                   <input type="submit" value="Login" />
                 </fieldset>
+                </div>
               </form>
             </div>
           </div>
         </div>
+       
       </DefaultLayout>
     );
   }

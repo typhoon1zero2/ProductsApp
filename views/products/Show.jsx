@@ -5,9 +5,10 @@ class Show extends React.Component {
   render() {
     const products = this.props.product;
     // const date = moment(log.createAt).format('MMM Do YYYY,h:mm:ss a')
+    const session = this.props.session;
     return (
       // Inside the render of the class
-      <DefaultLayout>
+      <DefaultLayout session ={session}>
         <div class="card-group">
           <div class="card">
             <img

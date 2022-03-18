@@ -13,8 +13,9 @@ require("../../public/css/app.css");
 
 class About extends React.Component {
   render() {
+    const session = this.props.session;
     return (
-      <DefaultLayout>
+      <DefaultLayout session ={session}>
         <hr/>
         <hr/>
         <body class="container">

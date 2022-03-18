@@ -14,9 +14,10 @@ const DefaultLayout = require("../layout/Default.jsx");
 class Index extends React.Component {
   render() {
     const products = this.props.product;
+    const session = this.props.session;
     console.log(products);
     return (
-      <DefaultLayout>
+      <DefaultLayout session = {session}>
         <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
           <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h3 class="display-4 fw-normal">Products App</h3>

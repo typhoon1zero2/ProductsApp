@@ -4,10 +4,10 @@ const bcrypt = require("bcrypt");
 const router = express.Router();
 
 router.get("/login", (req, res) => {
-  res.render("user/Login");
+  res.render("user/Login", { session: req.session});
 });
 router.get("/signup", (req, res) => {
-  res.render("user/SignUp");
+  res.render("user/SignUp", { session: req.session});
 });
 router.post("/login", async (req, res) => {
   // get the data from the request body

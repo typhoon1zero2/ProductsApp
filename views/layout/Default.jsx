@@ -14,6 +14,7 @@ require("../../public/css/app.css");
 class DefaultLayout extends React.Component {
   render() {
     const products = this.props.product;
+    const session = this.props.session;
     return (
       <html lang="en">
         <head>
@@ -53,16 +54,29 @@ class DefaultLayout extends React.Component {
               <a className="py-2 d-none d-md-inline-block" href="products/New">
                 Create Product
               </a>
-              <a className="py-2 d-none d-md-inline-block" href="/user/login">
-                Login
-              </a>
+              {session.loggedIn ? (
+                " "
+              ) : (
+                <a className="py-2 d-none d-md-inline-block" href="/user/login">
+                  Login
+                </a>
+              )}
 
               <a className="py-2 d-none d-md-inline-block" href="/user/logout">
                 Logout
               </a>
-              <a className="py-2 d-none d-md-inline-block" href="/user/SignUp">
+              <nav id="username-form">
+              {
+                
+                session.loggedIn ?
+                `Hello, ${session.username}`
+                :
+                <a className="py-2 d-none d-md-inline-block" href="/user/SignUp">
                 Sign-Up
               </a>
+              }
+              </nav>
+             
             </nav>
           </header>
           <main>

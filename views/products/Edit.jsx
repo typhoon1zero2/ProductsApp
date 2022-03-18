@@ -26,8 +26,9 @@ class Edit extends React.Component {
 
   render() {
     const products = this.props.product;
+    const session = this.props.session;
     return (
-      <DefaultLayout>
+      <DefaultLayout session ={session}>
         <div className="card">
           <Container>
             <Row>

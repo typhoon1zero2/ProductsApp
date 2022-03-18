@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/", (req, res) => {
   Product.find({})
     .then((product) => {
-      res.render("products/Index", { product });
+      res.render("products/Index", { product , session: req.session });
     })
     .catch((error) => {
       console.log(error);
@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 
 //About my page
 router.get("/about", (req, res) => {
-  res.render("products/About");
+  res.render("products/About", { session: req.session});
 });
 //Login Auth
 router.use((req, res, next) => {
@@ -28,7 +28,7 @@ router.use((req, res, next) => {
 });
 // New
 router.get("/new", (req, res) => {
-  res.render("products/New");
+  res.render("products/New", { session: req.session});
 });
 
 // Delete
@@ -73,7 +73,7 @@ router.get("/:id/edit", (req, res) => {
   const { id } = req.params;
   Product.findById(id)
     .then((product) => {
-      res.render("products/Edit", { product });
+      res.render("products/Edit", { product, session: req.session});
     })
     .catch((error) => {
       res.status(400).json({ error });
@@ -86,7 +86,7 @@ router.get("/:id", (req, res) => {
 
   Product.findById(id)
     .then((product) => {
-      res.render("products/Show", { product });
+      res.render("products/Show", { product , session: req.session});
     })
     .catch((error) => {
       console.log(error);
